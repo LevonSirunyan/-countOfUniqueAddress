@@ -38,12 +38,8 @@ public class JobConfiguration {
         FlatFileItemReader<Address> reader = new FlatFileItemReader<>();
         reader.setLinesToSkip(1);
         reader.setResource(new ClassPathResource("/data/addresses.txt"));
-
         DefaultLineMapper<Address> customerLineMapper = new DefaultLineMapper<>();
-
         DelimitedLineTokenizer tokenizer = new DelimitedLineTokenizer();
-        //tokenizer.setNames(new String[]{"address"});
-
         customerLineMapper.setLineTokenizer(tokenizer);
         customerLineMapper.setFieldSetMapper(new AddressMapper());
         customerLineMapper.afterPropertiesSet();

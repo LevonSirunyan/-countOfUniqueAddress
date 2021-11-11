@@ -40,7 +40,6 @@ public class CountOfUniqueAddress implements CommandLineRunner {
 
         JobExecution execution = jobLauncher.run(job, jobParameters);
         System.out.println("STATUS :: " + execution.getStatus());
-
-        System.out.printf("Count uf unique addresses is %s . " , addressService.getCountOfUniqueAddresses() );
+        System.out.printf("Count uf unique addresses is %s . ", addressService.getCountOfUniqueAddresses());
     }
 }

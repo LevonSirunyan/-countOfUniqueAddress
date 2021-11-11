@@ -12,7 +12,6 @@ public class AddressMapper implements FieldSetMapper<Address> {
     @Override
     public Address mapFieldSet(FieldSet fieldSet) throws BindException {
         return Address.builder()
-                //.addressValue(fieldSet.readString("address"))
                 .addressValue(fieldSet.getValues()[0])
                 .build();
     }

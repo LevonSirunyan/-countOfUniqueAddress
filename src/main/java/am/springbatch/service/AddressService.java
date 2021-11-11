@@ -11,7 +11,7 @@ public class AddressService {
         this.addressRepository = addressRepository;
     }
 
-    public long getCountOfUniqueAddresses(){
+    public long getCountOfUniqueAddresses() {
         return addressRepository.countOfUniqAddresses();
     }
 }
